@@ -10,5 +10,6 @@ COPY app /home/app/public
 COPY docker/post-deploy.sh /home/app/bin/
 COPY docker/supervisord-post-deploy.conf /etc/supervisor/conf.d/
 COPY docker/app.conf /usr/local/openresty/nginx/conf.d/nginx-httpd.conf
+COPY docker/pagespeed-site.conf /usr/local/openresty/nginx/conf/pagespeed-site.conf
 RUN chmod -R 777 /home/app
 
